@@ -5,6 +5,8 @@
 @layer base {
   :root {
     --primary: hsl(45deg 7.84% 20% / 70%);
+    --primary50: hsl(45deg 7.84% 20% / 50%);
+
     --primary1: hsl(45deg 32% 3%);
     --primary3: hsl(240 5.9% 10%);
     --primary-foreground: hsl(0 0% 98%);
@@ -16,6 +18,9 @@
     --sider-background: hsl(0 0% 97.25%);
     --item-hover-background: hsl(0deg 0% 0% / 5%);
     --item-selected-background: hsl(0deg 0% 0% / 7%);
+
+    --treeTableItemWidthWithOne:400px;
+    --treeTableItemWidthWithOther:200px
 
   }
 
@@ -30,8 +35,8 @@
 }
 
 @layer components{
-  .baseHoverItem{
-    @apply px-2.5 text-sm rounded-[5px] py-1 hover:bg-itemHoverBackground
+  .hoverItem{
+    @apply hover:!bg-itemHoverBackground  hover:!text-itemSelectedBackground
   }
 
   .icon{

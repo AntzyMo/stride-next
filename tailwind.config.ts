@@ -14,6 +14,8 @@ const config = {
     extend: {
       colors: {
         primary: 'var(--primary)',
+        primary50: 'var(--primary50)',
+
         primary1: 'var(--primary1)',
         primary3: 'var(--primary3)',
         primaryForeground: 'var(--primary-foreground)',
@@ -23,6 +25,11 @@ const config = {
         siderBackground: 'var(--sider-background)',
         itemHoverBackground: 'var(--item-hover-background)',
         itemSelectedBackground: 'var(--item-selected-background)'
+      },
+      width: {
+        treeTableItemWidthWithOne: 'var(--treeTableItemWidthWithOne)',
+        treeTableItemWidthWithOther: 'var(--treeTableItemWidthWithOther)'
+
       }
     }
   },

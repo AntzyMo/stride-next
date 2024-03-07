@@ -1,14 +1,14 @@
 import { cn } from '@/lib/utils'
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends React.ComponentProps<'div'> {
   icon?: React.ReactNode
 }
-
+// hover:bg-gray-100
 export default function Button({ children, className, icon, ...props }: React.PropsWithChildren<ButtonProps>) {
   return (
-    <button {...props} className={cn('w-full p-1 flex items-center justify-center rounded-[5px] hover:bg-itemHoverBackground hover:text-itemSelectedBackground', className)}>
+    <div {...props} className={cn('flex items-center text-sm text-primary cursor-pointer gap-1.5 p-1.5 px-2 rounded-[5px] hover:bg-gray-100', className)}>
       { icon }
       { children }
-    </button>
+    </div>
   )
 }
