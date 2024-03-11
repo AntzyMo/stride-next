@@ -9,7 +9,6 @@ import MingcuteLayoutRightbarCloseLine from '~icons/mingcute/layout-rightbar-clo
 
 import { cn } from '@/lib/utils'
 import Calendar from './Calendar'
-import SiderTree from './SiderTree'
 import { useGlobalContext } from '@/contexts'
 import SiderItem from './components/SiderItem'
 
@@ -41,7 +40,7 @@ export default function LayoutSider() {
       </div>
       <Calendar/>
       <div>
-        <SiderTree/>
+        123
       </div>
     </div>
   )

@@ -1,4 +1,3 @@
-'use client'
 import { useState } from 'react'
 
 import type { Task } from '../types'
@@ -8,16 +7,17 @@ import MingcuteDownLine from '~icons/mingcute/down-line'
 import MingcuteRightLine from '~icons/mingcute/right-line'
 
 import Checkbox from '@/components/Checkbox'
-import { useTableContext } from '@/contexts'
 
-export function titleRender(cell: CellContext<Task, unknown>) {
-  const { row, getValue } = cell
+interface TitleProps extends CellContext<Task, unknown> {
+  onBlur?: () => void
+}
+
+export function Title(titleProps: TitleProps) {
+  const { row, getValue, onBlur } = titleProps
   const { isEdit: isEditProps } = row.original
 
   const [value, setValue] = useState(getValue() as string)
   const [isEdit, setIsEdit] = useState(!!isEditProps)
-
-  const { delLastTask } = useTableContext()
 
   return (
     <div
@@ -52,7 +52,7 @@ export function titleRender(cell: CellContext<Task, unknown>) {
               onChange={e => setValue(e.target.value)}
               onBlur={() => {
                 if (!value.trim()) {
-                  delLastTask()
+                  onBlur?.()
                   return
                 }
                 setIsEdit(false)
