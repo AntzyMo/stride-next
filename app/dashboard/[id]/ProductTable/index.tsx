@@ -4,8 +4,8 @@ import { useState } from 'react'
 import type { Task } from './types'
 import type { ColumnDef } from '@tanstack/react-table'
 
-import Button from '@/components/Button'
 import RcTable from '@/components/RcTable'
+import IconButton from '@/components/IconButton'
 
 import TableBody from './TableBody'
 import { createRow } from './helper'
@@ -52,12 +52,12 @@ export default function ProductTable({ data }: ProductTableProps) {
       headerRender={header => <TableHeader header={header} />}
       footerRender={(
         <TableItem className='hover:bg-transparent ml-4 mt-1'>
-          <Button className='rounded-md' onClick={addRow}>
+          <IconButton className='rounded-md' onClick={addRow}>
             <div className='w-4 h-4 flex items-center justify-center rounded border-2  border-primary50'>
               <MingcuteAddFill className='w-2.5 h-2.5'/>
             </div>
             <span>增加一条计划吧 (´,,•∀•,,`)</span>
-          </Button>
+          </IconButton>
         </TableItem>
       )}
     />

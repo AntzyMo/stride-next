@@ -5,7 +5,7 @@ import type { CaptionProps } from 'react-day-picker'
 import MingcuteLeftFill from '~icons/mingcute/left-fill'
 import MingcuteRightFill from '~icons/mingcute/right-fill'
 
-import Button from '@/components/Button'
+import IconButton from '@/components/IconButton'
 
 type MonthChangeType = 'next' | 'prev'
 
@@ -25,13 +25,13 @@ export default function YearRender(props: YearRenderProps) {
     <div className='flex justify-between items-center mb-2 px-1.5' >
       <div className='text-[10px] font-medium'>{ format(displayMonth, 'yyyy 年 M 月', { locale: zhCN }) }</div>
       <div className='flex gap-'>
-        <Button className='w-5 h-5 hoverItem p-1' onClick={() => onChange('prev')}>
+        <IconButton className='w-5 h-5 hoverItem p-1' onClick={() => onChange('prev')}>
           <MingcuteLeftFill className="icon text-[10px]"/>
-        </Button>
+        </IconButton>
 
-        <Button className='w-5 h-5 hoverItem p-1' onClick={() => onChange('next')}>
+        <IconButton className='w-5 h-5 hoverItem p-1' onClick={() => onChange('next')}>
           <MingcuteRightFill className="icon text-[10px]"/>
-        </Button>
+        </IconButton>
 
       </div>
     </div>

@@ -1,6 +1,6 @@
 'use client'
-import Button from '@/components/Button'
 import Tooltip from '@/components/Tooltip'
+import IconButton from '@/components/IconButton'
 
 import { useGlobalContext } from '@/contexts'
 import MingcuteLayoutLeftbarOpenLine from '~icons/mingcute/layout-leftbar-open-line'
@@ -12,7 +12,7 @@ export default function SiderCollapsed() {
     return (
       <Tooltip
         tirgger={
-          <Button
+          <IconButton
             className='hoverItem p-1'
             icon={<MingcuteLayoutLeftbarOpenLine/>}
             onClick={triggerSiderCollapsed}
