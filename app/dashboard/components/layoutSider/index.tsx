@@ -1,7 +1,4 @@
 'use client'
-import { Button, Tree } from 'antd'
-import type { ButtonProps } from 'antd'
-
 import Tooltip from '@/components/Tooltip'
 import IconButton from '@/components/IconButton'
 
@@ -12,35 +9,9 @@ import MingcuteLayoutRightbarCloseLine from '~icons/mingcute/layout-rightbar-clo
 
 import { cn } from '@/lib/utils'
 import Calendar from './Calendar'
+import ProductMenus from './ProductMenus'
+import { SiderButton } from './SiderButton'
 import { useGlobalContext } from '@/contexts'
-
-const treeData = [
-  {
-    title: '日程计划',
-    key: 0,
-    children: [
-      {
-        title: '子日程',
-        key: 1
-      }
-    ]
-  },
-  {
-    title: '日常',
-    key: 2
-  }
-]
-
-function SiderButton({ className, ...props }: ButtonProps) {
-  return (
-    <Button
-      block
-      className={cn('!flex !items-center !justify-start !text-primary !font-medium !px-2.5 !py-1', className)}
-      type="text"
-      {...props}
-    />
-  )
-}
 
 export default function LayoutSider() {
   const { siderCollapsed, triggerSiderCollapsed } = useGlobalContext()
@@ -79,13 +50,7 @@ export default function LayoutSider() {
 
       <Calendar/>
 
-      <div>
-        <Tree
-          blockNode
-          className='!bg-transparent'
-          treeData={treeData}
-        />
-      </div>
+      <ProductMenus/>
     </div>
   )
 }

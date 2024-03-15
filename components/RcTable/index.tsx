@@ -69,8 +69,7 @@ export default function RcTable<T>(props: React.PropsWithChildren<RcTableProps<T
     getSubRows: originalRow => originalRow?.children,
     getRowCanExpand: row => row.subRows.length > 0,
     getCoreRowModel: getCoreRowModel(),
-    getExpandedRowModel: getExpandedRowModel(),
-    debugAll: true
+    getExpandedRowModel: getExpandedRowModel()
   })
 
   return (

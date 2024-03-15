@@ -11,6 +11,7 @@
   "dependencies": {
     "@ant-design/cssinjs": "^1.18.4",
     "@ant-design/nextjs-registry": "^1.0.0",
+    "@emotion/css": "^11.11.2",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@supabase/ssr": "^0.1.0",
@@ -20,7 +21,7 @@
     "clsx": "^2.1.0",
     "date-fns": "^3.3.1",
     "dayjs": "^1.11.10",
-    "idb-keyval": "^6.2.1",
+    "localforage": "^1.10.0",
     "next": "14.1.0",
     "next-themes": "^0.2.1",
     "react": "^18",
@@ -29,7 +30,7 @@
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
     "tree-model": "^1.0.7",
-    "unstorage": "^1.10.1"
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@antzy/eslint-config": "^3.2.3",
@@ -42,7 +43,6 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8.56.0",
     "postcss": "^8",
-    "sass": "^1.71.0",
     "tailwindcss": "^3.3.0",
     "typescript": "^5",
     "unplugin-icons": "^0.18.3"
